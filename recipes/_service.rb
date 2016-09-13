@@ -14,7 +14,7 @@ template node['kibana']['service']['template_file'] do
 end
 
 service 'systemd' do
-  supports start:
+  supports start: true
   action [:start]
 end
 
