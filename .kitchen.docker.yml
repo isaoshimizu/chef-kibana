@@ -1,7 +1,7 @@
 ---
 driver:
   name: docker
-  privileged: true
+  use_sudo: false
 
 ---
 platforms:
@@ -9,12 +9,16 @@ platforms:
   driver_config:
     image: ubuntu:14.04
     platform: ubuntu
+    run_command: /sbin/init
+    privileged: true
 - name: ubuntu-16.04
   run_list:
   - recipe[apt]
   driver_config:
     image: ubuntu:16.04
     platform: ubuntu
+    run_command: /sbin/init
+    privileged: true
 - name: centos-6.4
   driver_config:
     image: centos:6.4
