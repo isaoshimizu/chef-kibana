@@ -13,10 +13,10 @@ template node['kibana']['service']['template_file'] do
   notifies :restart, 'service[kibana]', :delayed
 end
 
-service 'systemd' do
-  supports start: true
-  action [:start]
-end
+# service 'systemd' do
+#   supports start: true
+#   action [:start]
+# end
 
 service 'kibana' do
   provider node['kibana']['service']['provider']
