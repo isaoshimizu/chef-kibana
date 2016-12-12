@@ -9,8 +9,6 @@ platforms:
   driver_config:
     image: ubuntu:14.04
     platform: ubuntu
-    run_command: /sbin/init
-    privileged: true
 - name: ubuntu-16.04
   run_list:
   - recipe[apt]
