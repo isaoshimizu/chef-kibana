@@ -17,7 +17,7 @@ class KibanaCookbook::ServiceResource < Chef::Resource::LWRPBase
   attribute(:service_actions, kind_of: [Symbol, Array], default: [:enable].freeze)
 
   # allow overridable init script
-  attribute(:bin_path, kind_of: String, default: 'kibana/bin')
+  attribute(:bin_path, kind_of: String, default: 'bin')
   attribute(:init_source, kind_of: String, default: 'upstart.conf.erb')
   attribute(:init_cookbook, kind_of: String, default: 'kibana')
 end
